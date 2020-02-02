@@ -4,9 +4,14 @@
 # Below you can find some code modifying the "wbs" package (version 1.3) by Baranowski and Fryzlewicz 
 # which can be used to perform seeded binary segmentation.
 
-require(devtools)
-install_version("wbs", version = "1.3", repos = "http://cran.r-project.org")
+packageurl <- "http://cran.r-project.org/src/contrib/Archive/wbs/wbs_1.3.tar.gz"
+install.packages(packageurl, repos = NULL, type = "source")
 library(wbs)
+
+# or
+# require(devtools)
+# install_version("wbs", version = "1.3", repos = "http://cran.r-project.org")
+# library(wbs)
 
 ##########################################################################################################################
 ##########################################################################################################################
@@ -188,4 +193,12 @@ seedBS <- function (x, decay = sqrt(2), ...){
 
 ##########################################################################################################################
 
+# an example
+set.seed(1)
+X		<- rep(rep(0:1, each = 100), 5) + rnorm(1000)
+res_seedBS	<- seedBS(X)
+res_WBS		<- wbs(X)
+changepoints(res_seedBS)$cpt.ic[[1]]
+changepoints(res_WBS)$cpt.ic[[1]]
+# in this example the change point estimates are the same, but the order of detection is apparently somewhat different.
 
