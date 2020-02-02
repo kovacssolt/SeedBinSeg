@@ -27,7 +27,7 @@ library(wbs)
 #'  
 #' @details ... 
 #' @param n specifying the length of the series
-#' @param decay 1/decay in the seeded interval generation 
+#' @param decay 1/a (in the notation of the paper) in the seeded interval generation 
 #' @param unique.int T if unique intervals should be returned (potentially slow, hence, default is F)
 #' @return a 2-column matrix with start (first column) and end (second column) points of an interval in each row
 #' @examples
