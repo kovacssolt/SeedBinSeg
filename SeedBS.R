@@ -198,7 +198,8 @@ set.seed(1)
 X		<- rep(rep(0:1, each = 100), 5) + rnorm(1000)
 res_seedBS	<- seedBS(X)
 res_WBS		<- wbs(X)
-changepoints(res_seedBS)$cpt.ic[[1]]
-changepoints(res_WBS)$cpt.ic[[1]]
-# in this example the change point estimates are the same, but the order of detection is apparently somewhat different.
+changepoints(res_seedBS)$cpt.ic[[2]]
+changepoints(res_WBS)$cpt.ic[[2]]
+# in this example the change point estimates are the same for seeded and wild binary segmentation, but the order
+# of detection is apparently somewhat different.
 
