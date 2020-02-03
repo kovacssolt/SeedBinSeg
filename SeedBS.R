@@ -2,7 +2,7 @@
 ##########################################################################################################################
 ##########################################################################################################################
 # Below you can find some code modifying the "wbs" package (version 1.3) by Baranowski and Fryzlewicz 
-# which can be used to perform seeded binary segmentation.
+# which can be used to perform seeded binary segmentation (with greedy selection).
 
 packageurl <- "http://cran.r-project.org/src/contrib/Archive/wbs/wbs_1.3.tar.gz"
 install.packages(packageurl, repos = NULL, type = "source")
