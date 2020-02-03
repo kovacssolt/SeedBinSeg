@@ -63,7 +63,7 @@ seeded.intervals <- function(n, decay = sqrt(2), unique.int = F){
 			    			cbind(floor(seq(1, n-int_length, length.out = (n_int))), 
 						    		ceiling(seq(int_length, n, length.out = (n_int)))))
     }
-    if(unique.int){return(unique(intervals))}
+    if(unique.int){return(unique(boundary_mtx))}
     boundary_mtx
 }
 
